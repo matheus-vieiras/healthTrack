@@ -1,0 +1,237 @@
+/* import de fonte */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  /* mais usados */
+  --botao-acao: #26C485;
+  --botao-regular: white;
+  --fundo-padrao: #201B2C;
+  --fundo-alter1: #2F2841;
+  --fundo-alter2: #2B253B;
+  --texto-padrao: white;
+  --texto-alter: black;
+  --destaque: #7371FC;
+
+  /* Transições */
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+html, body{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
+  padding: 0px;
+  box-sizing: border-box;
+  min-width: 800px;
+  z-index: 1;
+  background: var(--fundo-padrao);
+}
+
+.box{
+  background: var(--fundo-padrao);
+  height: 100vh;
+  opacity: 0.95;
+  position: relative;
+}
+
+.titulo{
+  font-size: 62px;
+  /* font-weight: bold; */
+  color: var(--botao-acao);
+  position: static;
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo{
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--botao-regular);
+  float: left;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.conteudo div{
+  width: 100%;
+}
+
+/* Fundo da lateral direita */
+.painel{
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--botao-regular);
+  float: left;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 1;
+}
+
+/* fundo do container dos botoes */
+.wrapper{
+  width: 40%;
+  min-width: 800px;
+  min-height: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  background-color: var(--fundo-alter1);
+  border-radius: 20px;
+  box-shadow:0px 0px 10px -2px rgba(0, 0, 0, 0.13);
+  justify-content: space-around;
+  z-index: 100;
+  opacity: 1;
+}
+
+form{
+  width: 100%;
+  height: 100%;
+}
+
+.form-titulo {
+  display: block;
+  color: var(--botao-acao);
+  font-size: 2.5rem;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.wrapper-input {
+  display: block;
+  width: 80%;
+  position: relative;
+  background: var(--fundo-alter2);
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-left: 80px;
+  margin-bottom: 50px;
+}
+
+/* Formatação dos campos do formulário */
+.form-input {
+  color: white;
+  background-color: var(--fundo-alter2);
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: block;
+  line-height: 1.2;
+  width: 100%;
+  height: 40px;
+  border: solid 1px;
+  border-color: var(--fundo-alter2);
+}
+
+/* Posição da label dos campos */
+.focus-form-input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-bottom: 2px solid var(--fundo-alter2);
+}
+
+.focus-form-input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s;
+  background-color: var(--botao-acao);
+}
+
+.focus-form-input::before {
+  font-size: 18px;
+  color: white;
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  padding: 10px;
+  transition: all 0.4s;
+}
+
+.form-input:valid + .focus-form-input::before,
+.form-input:focus + .focus-form-input::before {
+  top: -32px;
+  padding: 0px;
+  font-size: 22px;
+  color: var(--botao-acao);
+  font-weight: 600;
+  outline: none;
+}
+
+.form-input:focus + .focus-form-input::after {
+  width: 100%;
+  border-bottom: 2px solid var(--botao-acao);
+}
+
+input:focus {
+  outline: 0 none;
+}
+
+.container-form-login-btn {
+  width: 100px;
+  display: flex;
+  margin-left: 625px;
+  margin-top: -35px;
+}
+
+.login-btn {
+  font-size: 16px;
+  color: var(--botao-acao);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 1px;
+  border-color: var(--botao-acao);
+  background-color: var(--fundo-alter1);
+  transition: all 0.4s;
+}
+
+.login-btn:hover {
+  background-color: var(--botao-acao);
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .conteudo, .painel {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    height: 300px;
+  }
+}
+

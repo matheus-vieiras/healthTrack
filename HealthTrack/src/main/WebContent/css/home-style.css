@@ -1,0 +1,114 @@
+/* import de fonte */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  /* mais usados */
+  --botao-acao: #26C485;
+  --botao-regular: white;
+  --fundo-padrao: #201B2C;
+  --fundo-alter1: #2F2841;
+  --fundo-alter2: #2B253B;
+  --texto-padrao: white;
+  --texto-alter: black;
+  --destaque: #7371FC;
+
+  /* Transições */
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+html{
+  background: url(/img/fundo.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
+  padding: 0px;
+  box-sizing: border-box;
+  min-width: 800px;
+  z-index: 1; 
+}
+
+.box{
+  background: var(--fundo-padrao);
+  height: 100%;
+  position: relative;
+}
+
+.titulo{
+  font-size: 62px;
+  /* font-weight: bold; */
+  color: var(--botao-acao);
+  position: static;
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo{
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--botao-regular);
+  float: left;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.conteudo div{
+  width: 100%;
+}
+
+/* Fundo da lateral direita */
+.painel{
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--botao-regular);
+  float: left;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 1;
+}
+
+/* fundo do container dos botoes */
+.wrapper{
+  width: 80%;
+  min-width: 800px;
+  min-height: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  background-color: var(--fundo-alter1);
+  border-radius: 20px;
+  justify-content: space-around;
+  z-index: 100;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 1200px) {
+  .conteudo, .painel {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    height: 300px;
+  }
+}
+

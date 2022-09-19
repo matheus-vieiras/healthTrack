@@ -1,0 +1,76 @@
+/* import de fonte */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  /* mais usados */
+  --botao-acao: #26C485;
+  --botao-regular: white;
+  --fundo-padrao: #201B2C;
+  --fundo-alter1: #2F2841;
+  --fundo-alter2: #2B253B;
+  --texto-padrao: white;
+  --texto-alter: black;
+  --destaque: #7371FC;
+
+  /* Transições */
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+html, body{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
+  padding: 0px;
+  box-sizing: border-box;
+  min-width: 800px;
+  z-index: 1;
+  background: var(--fundo-padrao);
+}
+
+.box{
+  background: var(--fundo-padrao);
+  height: 100vh;
+  opacity: 0.95;
+  position: relative;
+}
+
+.titulo{
+  font-size: 62px;
+  /* font-weight: bold; */
+  color: var(--botao-acao);
+  position: static;
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.painel {
+  align-items: center;
+  align-content: center;
+}
+
+.input-group {
+  margin-top: 35px;
+}
+
+.btn btn-primary {
+  align-content: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .conteudo, .painel {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    height: 300px;
+  }
+}
+
